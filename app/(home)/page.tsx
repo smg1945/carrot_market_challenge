@@ -4,7 +4,7 @@ import styles from "../../styles/home.module.css"
 
 
 export const metadata = {
-  title: "Home",
+  title: "World Billions",
 }
 
 async function getBillions() {
