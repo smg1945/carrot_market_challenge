@@ -4,7 +4,7 @@ import PersonInfo from '@/components/person-info';
 import PersonAssets from '@/components/person-assets';
 
 
-export async function genMetadata({params:{id}}:{params:{id:string}}) {
+export async function generateMetadata({params:{id}}:{params:{id:string}}) {
     const person = await getPerson(id)
     return {
         title: person.name

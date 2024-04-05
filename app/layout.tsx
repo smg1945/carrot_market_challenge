@@ -1,11 +1,14 @@
-import type { Metadata } from "next";
 import "../styles/globals.css";
+import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-  title: "World Billionaires",
-  description: "A list of the world's billionaires",
-};
+  title: {
+    template: "%s | World Billionaires",
+    default: "World Billionaires"
+  },
+  description: "Information about the world's billionaires.",
+}
 
 export default function Layout({ children }: {children: React.ReactNode}) {
   return (
