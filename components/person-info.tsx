@@ -1,11 +1,6 @@
 import styles from "../styles/person-info.module.css"
-import { API_URL } from "../app/constants"
+import { getPerson } from "../app/functions"
 
-
-export async function getPerson(id: string) {
-    const response = await fetch(`${API_URL}/person/${id}`)
-    return response.json()
-}
 
 export default async function PersonInfo({id}:{id:string}) {
     const person = await getPerson(id)

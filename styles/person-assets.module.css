@@ -1,0 +1,32 @@
+.assets {
+  background-color: #131B21;
+  padding: 5% 3%;
+  border-radius: 0.7rem;
+  margin: 5%;
+}
+
+.assets_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.asset_box {
+  display: flex;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  flex-direction: column;
+  border-style: solid;
+  border-radius: 0.7rem;
+  border-color: #2E363C;
+}
+
+.ticker,
+.numberOfShares,
+.exercise {
+  margin-bottom: 0.7rem;
+}
+
+.empty {
+  height: 20px;
+  margin-bottom: 0.7rem;
+}

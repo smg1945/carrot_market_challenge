@@ -1,5 +1,7 @@
 import { Suspense } from 'react';
-import PersonInfo, { getPerson } from '@/components/person-info';
+import { getPerson } from '@/app/functions';
+import PersonInfo from '@/components/person-info';
+import PersonAssets from '@/components/person-assets';
 
 
 export async function genMetadata({params:{id}}:{params:{id:string}}) {
@@ -15,8 +17,13 @@ export default async function PersonDetail({
     params:{id:string}
 }) {
     return (
-        <Suspense fallback={<div>Loading...</div>}>
-            <PersonInfo id={id} />
-        </Suspense>
+        <div>
+            <Suspense fallback={<div>Loading...</div>}>
+                <PersonInfo id={id} />
+            </Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
+                <PersonAssets id={id} />
+            </Suspense>
+        </div>
     )
 }

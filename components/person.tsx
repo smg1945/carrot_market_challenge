@@ -24,7 +24,7 @@ export default function Person({ id, squareImage, name, netWorth, industries }: 
       <img className={styles.squareImage} src={squareImage}/>
       <h1 className={styles.name}>{name}</h1>
       <div className={styles.infobox}>
-        <span className={styles.netWorth}>{formattedNetWorth} </span>
+        <span className={styles.netWorth}>{formattedNetWorth}</span>
         <span className={styles.divider}>/</span>
         <span className={styles.industries}>{industries}</span>
       </div>
